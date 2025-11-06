@@ -5,7 +5,7 @@ from .config import DATA_RAW, TRAIN_PATH, TEST_PATH
 def main():
     df = pd.read_csv(str(DATA_RAW))
     assert {"review", "sentiment"} <= set(df.columns), "需要列: review, sentiment"
-    df = df.dropna(subset=["review", "sentiment"]).copy()
+    df.dropna(subset=["review", "sentiment"]).copy()
     df["label"] = df["sentiment"].map({"negative": 0, "positive": 1})
     assert df["label"].isin([0,1]).all(), "sentiment 只支持 positive/negative"
 
