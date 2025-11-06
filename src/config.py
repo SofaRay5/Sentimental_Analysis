@@ -16,7 +16,6 @@ VOCAB_SIZE = 20000
 MIN_FREQ   = 2
 USE_BIGRAM = True
 ALPHA      = 1.0
-
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
